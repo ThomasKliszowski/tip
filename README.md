@@ -7,6 +7,7 @@ Tip is a plugin which allows you to add some tips, easily!
 ## Usage:
 
 Initialise Tip:
+
     <script>
     $(document).ready(function(){
       $('[data-tip]').tip({
