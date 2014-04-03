@@ -1,0 +1,39 @@
+.widget-tip {
+  @height: 30px;
+  @pointer-size: 10px;
+
+  position: absolute;
+  height: @height;
+  padding-top: @pointer-size;
+  overflow: hidden;
+
+  opacity: 0;
+  .transform(translate(0,5px));
+  &.active {
+    opacity: 0.7;
+    .transform(translate(0,0));
+  }
+  &.animate { .transition(all 0.224s ease-in-out); }
+
+  .widget-tip-text {
+    line-height: @height;
+    height: @height;
+    padding: 0 10px;
+    white-space: nowrap;
+    font-size: 0.9em;
+    .border-radius(3px);
+
+    background: #333;
+    color: #FFF;
+  }
+
+  .widget-tip-pointer {
+    position: absolute;
+    top: -@pointer-size;
+    left: 50%;
+    margin-left: -@pointer-size;
+    border: @pointer-size solid transparent;
+    border-bottom-color: #333;
+    -webkit-backface-visibility: hidden;
+  }
+}
