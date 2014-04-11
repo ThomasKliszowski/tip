@@ -2,6 +2,7 @@
   var Tip = function(target, options){
     this.target = target;
     this.options = $.extend({
+      html: target.attr('data-tip'),
       margin: 2,
       delay: 0
     }, options);
@@ -20,13 +21,11 @@
     var tip = this.tip;
     var options = this.options;
 
-    var html = target.attr('data-tip');
-
     tip.clearQueue().delay(options.delay).queue(function(){
       tip.removeClass('animate').removeClass('active');
       $(this).dequeue();
     }).delay(50).queue(function(){
-      text.html(html);
+      text.html(options.html);
       $('body').append(tip);
 
       // Move tip
