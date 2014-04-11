@@ -12,7 +12,8 @@ Initialise Tip:
     $(document).ready(function(){
       $('[data-tip]').tip({
         delay: 0,
-        margin: 2
+        margin: 2,
+        html: "My HTML content" // Don't set this option if you want to get data-tip attribute on each nodes
       });
     });
     </script>
