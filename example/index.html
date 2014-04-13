@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jquery.tip</title>
+  <link rel="stylesheet" type="text/css" href="/example/builds/style.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="/bower-components/jquery/jquery.js"></script>
+  <script type="text/javascript" src="/bower-components/transitionEnd/transition-end.min.js"></script>
+  <script type="text/javascript" src="/src/jquery.tip.js"></script>
+</head>
+<body>
+
+  <div data-tip="My tip" class="target top left">Target</div>
+  <div data-tip="My tip" class="target top right">Target</div>
+  <div data-tip="My tip" class="target bottom right">Target</div>
+  <div data-tip="My tip" class="target bottom left">Target</div>
+  <div data-tip="My tip" class="target center">Target</div>
+
+  <script type="text/javascript">
+    $('[data-tip]').tip();
+  </script>
+</body>
+</html>
