@@ -37,7 +37,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'dist/jquery.tip.js': [
-            'bower-components/transitionEnd/transition-end.min.js',
+            'bower_components/transitionEnd/transition-end.min.js',
             'src/jquery.tip.js'
           ]
         }
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
       install: {
         forceLatest: false,
         options: {
-          targetDir: 'bower-components',
+          targetDir: 'bower_components',
           layout: 'byComponent',
           install: true
         }
