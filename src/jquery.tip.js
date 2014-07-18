@@ -14,9 +14,17 @@
     this.tip.append(this.text).append(this.pointer);
     this.setClass('bottom');
 
-    this.state = "idle";
-
-    this.target.hover($.proxy(this.show, this), $.proxy(this.hide, this));
+    // Test if device supports touch events
+    if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch){
+      // Listen touch events
+      $(window).on('touchend', function(e){
+        target = $(e.target).closest(this.target);
+        this[target.length ? 'show' : 'hide']();
+      }.bind(this));
+    }else{
+      // Listen hover / blur events
+      this.target.hover($.proxy(this.show, this), $.proxy(this.hide, this));
+    }
   };
 
   Tip.prototype.setClass = function(cls){
