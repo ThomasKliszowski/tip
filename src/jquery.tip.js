@@ -1,4 +1,5 @@
 (function(jQuery){
+  var $ = jQuery;
   var Tip = function(target, options){
     this.target = target;
     this.options = $.extend({
